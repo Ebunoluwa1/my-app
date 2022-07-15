@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { StyledApp } from './App.styled.js';
+import Button from './Components/Button/Button';
+import Dashboard from './Components/Dashboard/Dashboard';
+import InputField from './Components/InputField/InputField';
+import Main from './Components/Main/Main.jsx';
+import Sidebar from './Components/Sidebar/Sidebar.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <StyledApp>
+               {/* sidebar */}
+         <div className='app__sidebar'>
+              <Sidebar/>
+          </div>
+          {/* main */}
+              <div className='main'>
+                <Main />
+              </div>
+
+    </StyledApp>
   );
 }
 
